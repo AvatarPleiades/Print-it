@@ -36,3 +36,22 @@ next.addEventListener("click", () => {
 	}
 	Dots[counter].classList.add("dot_selected");	
 });
+
+//Javascript flèche précédent
+const back = document.querySelector(".arrow_left");
+
+back.addEventListener("click", () => {
+	counter--;
+	if(counter < 0){ 
+		Dots[counter+1].classList.remove("dot_selected");
+		counter = SlideImg - 1;
+	}
+	
+	img.src = "./assets/images/slideshow/" + slides[counter].image;
+	texte.innerHTML = slides[counter].tagLine;
+
+	if(counter != SlideImg - 1){
+		Dots[counter+1].classList.remove("dot_selected");	
+	}
+	Dots[counter].classList.add("dot_selected");
+});
