@@ -62,3 +62,15 @@ const texte = document.querySelector("#banner p");
 const SlideImg = slides.length;
 
 let counter = 0;
+
+//Javascript des dots du slider
+const containerDot = document.querySelector(".dots");
+
+for(let i = 0; i < slides.length; i++) {
+	const Dot = document.createElement('div');
+	Dot.classList.add("dot");
+	containerDot.appendChild(Dot);
+}
+
+let Dots = document.querySelectorAll(".dot");
+Dots[0].classList.add("dot_selected");
