@@ -55,3 +55,10 @@ back.addEventListener("click", () => {
 	}
 	Dots[counter].classList.add("dot_selected");
 });
+
+//Javascript des images du slider et de leurs textes
+const img = document.querySelector(".banner-img");
+const texte = document.querySelector("#banner p");
+const SlideImg = slides.length;
+
+let counter = 0;
